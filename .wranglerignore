@@ -1,0 +1,11 @@
+# Exclude local dependencies and development files from Wrangler asset publishing
+node_modules/
+.git/
+.vscode/
+package-lock.json
+package.json
+README.md
+*.log
+*.md
+*.toml
+wrangler.*

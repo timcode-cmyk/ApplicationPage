@@ -56,6 +56,10 @@ python3 -m http.server 8080
 
 > 本页面仅使用静态文件和浏览器端 GitHub API 请求，无需额外后端服务。
 
+### 如果使用 Wrangler 部署
+
+如果你的 Cloudflare 构建管道执行 `npx wrangler deploy`，请确保仓库目录中的大型依赖不会被当作静态资产上传。本仓库已包含 `.wranglerignore`，自动排除 `node_modules/`、`.git/` 和其他开发文件。
+
 ## 注意事项
 
 - GitHub API 存在速率限制。如果访问量较大，建议使用 GitHub PAT 或在构建时生成静态数据。
