@@ -43,6 +43,9 @@ nuitka-crash-report.xml
 # Node modules
 node_modules/
 
+# Vite build output
+dist/
+
 *.log
 ffmpeg_log.txt
 .pytest_cache

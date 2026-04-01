@@ -50,15 +50,17 @@ python3 -m http.server 8080
 2. 选择 `Production branch`，通常为 `main`。
 3. 构建设置：
    - Framework preset: `None`
-   - Build command: 留空
-   - Build output directory: `/`
+   - Build command: `npm run build`
+   - Build output directory: `dist`
 4. 保存并发布。
 
-> 本页面仅使用静态文件和浏览器端 GitHub API 请求，无需额外后端服务。
+> 本页面使用 Vue + Vite 构建，最终输出为静态文件，可直接部署到 Cloudflare Pages。
 
-### 如果使用 Wrangler 部署
+## 标准 Cloudflare Pages 项目说明
 
-如果你的 Cloudflare 构建管道执行 `npx wrangler deploy`，请确保仓库目录中的大型依赖不会被当作静态资产上传。本仓库已包含 `.wranglerignore`，自动排除 `node_modules/`、`.git/` 和其他开发文件。
+- 该仓库是一个 Vue + Vite 项目，入口文件为 `index.html`，源代码位于 `src/`。
+- `npm run dev` 启动本地开发服务器；`npm run build` 生成生产代码到 `dist/`。
+- 若使用 Cloudflare Pages Git 集成，请确保构建命令为 `npm run build`，输出目录为 `dist`。
 
 ## 注意事项
 
