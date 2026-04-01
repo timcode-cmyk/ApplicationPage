@@ -1,0 +1,13 @@
+{
+  "name": "applicationpage",
+  "version": "1.0.0",
+  "description": "Cloudflare Pages release page for development and production software releases.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "check": "node --check app.js"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
